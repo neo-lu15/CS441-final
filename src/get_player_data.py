@@ -5,7 +5,7 @@
 # # 1. Define the seasons you want (2016-17 to 2024-25)
 # # NBA API formats seasons as "YYYY-YY", e.g., "2016-17"
 # seasons = []
-# for year in range(2016, 2025):
+# for year in range(2016, 2024):
 #     next_year = str(year + 1)[-2:] # Get last two digits of next year
 #     seasons.append(f"{year}-{next_year}")
 
@@ -41,15 +41,15 @@
 # final_df = pd.concat(all_season_data, ignore_index=True)
 
 # # 4. Save to CSV for your ML project
-# final_df.to_csv('nba_player_stats_2016_2025.csv', index=False)
-# print("Success! Data saved to 'nba_player_stats_2016_2025.csv'")
-# # import pandas as pd
-# # import time
-# # from nba_api.stats.endpoints import leaguegamelog
+# final_df.to_csv('nba_player_stats_2016_2024.csv', index=False)
+# print("Success! Data saved to 'nba_player_stats_2016_2024.csv'")
+# import pandas as pd
+# import time
+# from nba_api.stats.endpoints import leaguegamelog
 
 # # 1. Define the seasons (2016-17 to 2024-25)
 # seasons = []
-# for year in range(2016, 2025):
+# for year in range(2016, 2024):
 #     next_year = str(year + 1)[-2:]
 #     seasons.append(f"{year}-{next_year}")
 
@@ -89,8 +89,8 @@
 #     final_df = pd.concat(all_games, ignore_index=True)
     
 #     # Save to a large CSV
-#     final_df.to_csv('nba_all_games_2016_2025.csv', index=False)
-#     print(f"\nDONE! Saved {len(final_df)} rows to 'nba_all_games_2016_2025.csv'")
+#     final_df.to_csv('nba_all_games_2016_2024.csv', index=False)
+#     print(f"\nDONE! Saved {len(final_df)} rows to 'nba_all_games_2016_2024.csv'")
 # else:
 #     print("No data found.")
 import pandas as pd
@@ -149,7 +149,7 @@ def get_game_coords(row):
 
 print("Loading data...")
 # Make sure this matches your current filename
-df = pd.read_csv('nba_all_games_2016_2025.csv') 
+df = pd.read_csv('nba_all_games_2016_2024.csv') 
 
 # Convert date column to datetime objects
 df['GAME_DATE'] = pd.to_datetime(df['GAME_DATE'])
